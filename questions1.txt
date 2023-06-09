@@ -1,0 +1,69 @@
+# Answer the following questions for MNIST assignment
+
+1. What was the difference in final evaluation for each algorithm on this problem?
+Naive Bayes:
+Accuracy on training data: 82.53%
+Accuracy on test data: 83.65%
+Model precision: 83.65%
+Model precision: 84.45%
+Average score: 82.57%
+Average accuracy: 96.34%
+Average precision: 77.23%
+Average recall: 95.81%
+Average f1: 85.51%
+
+Logistic Regression:
+Accuracy on training data: 94.17%
+Accuracy on test data: 92.20%
+Model precision: 92.20%
+Model precision: 92.19%
+
+We see a difference of 11.64% in the accuracy between the two machine-learning models.
+The precision between the models also has a difference of 8.55% which makes Logistic Regression a better model for this MNIST dataset.
+
+
+2. If you observed a different in evaluation, why do you believe one algorithm performed better than the other?
+
+Because of the following reasons, Logistic Regression can outperform Naive Bayes when used in the MNIST dataset:
+Feature Independence: Naive Bayes assumes that the features are always conditionally independent of the class. 
+Interactions between the features can be captured via logistic regression, increasing the model's accuracy on the MNIST dataset. 
+
+Complexity: Unlike Naive Bayes, Logistic Regression is a more complicated model that may capture detailed correlations between the features and the target.
+
+Non-Linear Decision Borders: In the MNIST dataset, non-linear decision boundaries from logistic Regression may be more helpful in classifying the various groups. 
+However, Naive Bayes only captures simple correlations between the features and assumes linear limits.
+
+Additionally, it is essential to note that Naive Bayes can still produce promising results on the MNIST dataset, particularly when combined with additional methods like dimensionality reduction or feature engineering. 
+Naive Bayes is also a quick and straightforward model, which can be helpful when working with big datasets.
+
+3. Based on the confusion matrix, which numerals contributed most to the error, and why?
+For Naive Bayes, 
+4 is classified as 9 -> 176 times
+5 is classified as 3 -> 107 times
+5 is classified as 8 -> 78 times
+
+For Logestic Regression, 
+2 is classified as 8 -> 39 times
+5 is classified as 3 -> 37 times
+5 is classified as 8 -> 37 times
+
+This is generally because sometimes the models cannot differentiate the difference between two images that look similar which may be caused due to bad handwriting which would be evidently human errors.
+
+If you used AI assistants such as Copilot & ChapGPT:
+
+- Which AI tools did you use and for what part of the solution?
+- Optional: share any reflection on using such tools. 
+For instance, did they contribute to your learning? Were they more helpful than harmful? Did you notice any mistakes in their outputs?
+
+I have used Chat GPT to find the syntax of the code which helped me in the following use case:
+Learnings - 
+The fit_prior hyperparameter in the Naive Bayes model determines whether to learn class prior probabilities 
+from the training data or to use a uniform prior. By setting fit_prior to True, 
+the model will learn class prior probabilities from the training data, 
+while setting it to False will use a uniform prior.
+
+
+
+
+
+
